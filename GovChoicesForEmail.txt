@@ -1,0 +1,11 @@
+Each Programming language has support configuring SMTP (Simple Mail Transfer Protocol) and send email using that from an OpenShift app.
+
+https://github.com/bcgov/jag-mail-it 
+
+There was another \project to pitch a service to Gov that would be on OpenShift and send email, slack, teams etc. notification based on configuration. That initiative died too. 
+
+https://github.com/bcgov/issuer-kit/blob/edee62127449f125ae428587f09087bcf9722f7b/api/src/utils/email.ts#L13
+https://github.com/bcgov/replication_health_check/blob/60a8f801b1045b196116d1975e2d97e82a7d2fa9/src/Emailer.py#L198
+
+https://digital.gov.bc.ca/common-components/
+https://digital.gov.bc.ca/bcgov-common-components/common-hosted-email-service/ (restriction Applications using CHES must be hosted on the government network.)
