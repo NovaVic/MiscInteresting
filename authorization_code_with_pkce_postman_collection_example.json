@@ -1,0 +1,122 @@
+{
+    "info": {
+        "_postman_id": "blahblahblahblahblah",
+        "name": "blahblah",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "11111111"
+    },
+    "item": [
+        {
+            "name": "oidc_example",
+            "protocolProfileBehavior": {
+                "disableUrlEncoding": true,
+                "disabledSystemHeaders": {
+                    "user-agent": true
+                }
+            },
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "clientId",
+                            "value": "keycloak-client-id",
+                            "type": "string"
+                        },
+                        {
+                            "key": "grant_type",
+                            "value": "authorization_code_with_pkce",
+                            "type": "string"
+                        },
+                        {
+                            "key": "useBrowser",
+                            "value": true,
+                            "type": "boolean"
+                        },
+                        {
+                            "key": "scope",
+                            "value": "openid",
+                            "type": "string"
+                        },
+                        {
+                            "key": "accessTokenUrl",
+                            "value": "https://keycloak-url/auth/realms/standard/protocol/openid-connect/token",
+                            "type": "string"
+                        },
+                        {
+                            "key": "authUrl",
+                            "value": "https://keycloak-domain-url/auth/realms/standard/protocol/openid-connect/auth",
+                            "type": "string"
+                        },
+                        {
+                            "key": "redirect_uri",
+                            "value": "http://localhost:9000",
+                            "type": "string"
+                        },
+                        {
+                            "key": "tokenName",
+                            "value": "token",
+                            "type": "string"
+                        },
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion"
+                    }
+                ],
+                "url": {
+                    "raw": "https://keycloak-domain-url/auth/realms/standard/protocol/openid-connect/auth?client_id=keycloak-client-id&response_type=code&code_challenge=blahblag-challenge-code&code_challenge_method=S256&redirect_uri=http://localhost:9000&idp_hint=blahblah_idp_name",
+                    "protocol": "https",
+                    "host": [
+                        "keycloak",
+                        "domain",
+                        "url"
+                    ],
+                    "path": [
+                        "auth",
+                        "realms",
+                        "standard",
+                        "protocol",
+                        "openid-connect",
+                        "auth"
+                    ],
+                    "query": [
+                        {
+                            "key": "client_id",
+                            "value": "keycloak-client-id"
+                        },
+                        {
+                            "key": "response_type",
+                            "value": "code"
+                        },
+                        {
+                            "key": "code_challenge",
+                            "value": "blahblah-code-challenge"
+                        },
+                        {
+                            "key": "code_challenge_method",
+                            "value": "S256"
+                        },
+                        {
+                            "key": "redirect_uri",
+                            "value": "http://localhost:9000"
+                        },
+                        {
+                            "key": "idp_hint",
+                            "value": "blahblah_idp_name"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
