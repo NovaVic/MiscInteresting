@@ -1,0 +1,4 @@
+Useful Commands
+
+
+curl –data "grant_type=client_credentials&client_id=blahblah-service-registry&client_secret=blahblah" https://keycloak-domain-url/auth/realms/Kafka/protocol/openid-connect/token
